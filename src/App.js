@@ -20,9 +20,41 @@ class App extends Component {
       <div className="App">
         <UserInput username={this.state.username} change={this.eventHandler}/>
         <UserOutput username={this.state.username} />
+        <UserOutput username={this.state.username} />
       </div>
     );
   }
 }
 
 export default App;
+
+
+// ======================================= ALTERNATIVE SYNTAX:
+
+// class App extends Component {
+//   constructor() {
+//     super(); //NOTE: No this before super.
+//     this.state = {
+//       username: 'Rachel'
+//     };
+
+//     this.eventHandler = (event) => {
+//       this.setState({
+//         username: event.target.value
+//       });
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <UserInput username={this.state.username} change={this.eventHandler}/>
+//         <UserOutput username={this.state.username} />
+//         <UserOutput username={this.state.username} />
+//       </div>
+//     );
+//   }
+// }
+
+// export default App;
+
